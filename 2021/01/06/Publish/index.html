@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Yu-Shiang Lin">
+
+
+
+
+
+<title>Publish | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/"></a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" target="_blank" rel="noopener" href="http://localhost:4000/2021/01/06/Project/">Project</a>
+                
+                    <a class="menu-item" href="/about">Resume</a>
+                
+                    <a class="menu-item" target="_blank" rel="noopener" href="http://localhost:4000">Home</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/"></a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" target="_blank" rel="noopener" href="http://localhost:4000/2021/01/06/Project/">Project</a>
+                
+                    <a class="menu-item" href="/about">Resume</a>
+                
+                    <a class="menu-item" target="_blank" rel="noopener" href="http://localhost:4000">Home</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Publish</h1>
+            
+                <div class="post-meta">
+                    
+
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="Conference"><a href="#Conference" class="headerlink" title="Conference"></a>Conference</h2><ul>
+<li>Chieh-Yu Yu, Che-Rung Lee, Po-Jui Tsao, <font color="#f00">Yu-Shiang Lin</font>, Tzi-Cker Chiueh, “Efficient Group Fault Tolerance for Multi-tier Services in Cloud Environments”, ICC, 2020.</li>
+<li><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Che-Rung Lee, Yeh-Ching Chung, “qCUDA: GPGPU Virtualization for High Bandwidth Efficiency ”, CloudCom, 2019.</li>
+<li>Ming-Ting Wei, <font color="#f00">Yu-Shiang Lin</font>, Che-Rung Lee, “Performance Optimization for InfiniBand Virtualization on QEMU/KVM”, CloudCom, 2019.</li>
+<li>Chun-Yuan Lin, Chung-Hung Wang, Che-Lun Hung, <font color="#f00">Yu-Shiang Lin</font>, “Efficient parallel algorithm for compound comparisons on multi-GPUs”, IEEE -BIBM, 2014.</li>
+<li><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Jon-Yu Lee, “A New Non-Blocking Approach on GPU Dynamical Memory Management”, IWCSE, 2013.</li>
+<li><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Yeh-Ching Chung, “GPU-Based Cloud Service for Multiple Sequence Alignments with Regular Expression Constrains”, CloudCom, 2012.</li>
+<li><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Der-Chyuan Lou, “Efficient Parallel RSA Decryption Algorithm for Many-core GPUs with CUDA”, ICTSM2012.</li>
+<li>Yu-Rong Chen, Che Lun Hung, <font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Tien-Lin Lee, Kual-Zheng Lee, “Parallel UPGMA Algorithm on Graphics Processing Units Using CUDA”, FGC2012.</li>
+<li>Chun-Yuan Lin, <font color="#f00">Yu-Shiang Lin</font>, Jiayi Zhou, and Chuan Yi Tang, “GPU-REMuSiC: Efficient Contrained Multiple Sequence Alignment Algorithm on Graphics Processing Units”, CTHPC, 2011.</li>
+<li><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Sheng-Ta Li, Joy Lee, and Chuan Yi ang, “GPU-REMuSiC: the implementation of Constrain Multiple Sequence Alignment on Graphics Processing Units”, NVIDIA GPU  Computing Seminar, 2010.</li>
+</ul>
+<h2 id="Journal"><a href="#Journal" class="headerlink" title="Journal"></a>Journal</h2><ul>
+<li>Che-Lun Hung, <font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Yeh-Ching Chung, Yi-Fang Chung, “CUDA ClustalW: An efficient parallel algorithm for progressive multiple sequence alignment on Multi-GPUs”, CBAC(2015).</li>
+<li>Chun-Yuan Lin, Chung-Hung Wang, Che-Lun Hung, and <font color="#f00">Yu-Shiang Lin</font>, “Accelerating Multiple Compound Comparison Using LINGO-Based Load-Balancing Strategies on Multi-GPUs”, IJG (2015).</li>
+<li><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Che-Lun Hung, Yeh-Ching Chung and Kual-Zheng Lee: GPU-UPGMA: high-performance computing for UPGMA algorithm based on graphics processing units.CCPE(2014).</li>
+<li>Chun-Yuan Lin, <font color="#f00">Yu-Shiang Lin</font>: Efficient parallel algorithm for multiple sequence alignments with regular expression constraints on graphics processing units. IJCSE 9(1/2): 11-20 (2014).</li>
+<li><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Hsiao-Chieh Chi, Yeh-Ching Chung: Multiple Sequence Alignments with Regular Expression Constraints on a Cloud Service System. IJGHPC 5(3): 55-64 (2013).</li>
+</ul>
+<h2 id="Book"><a href="#Book" class="headerlink" title="Book"></a>Book</h2><ul>
+<li>CUDA 輕鬆上手，新世代GPU應用技術：林俊淵、周嘉奕、<font color="#f00">林郁翔</font>、李昇達等人合著 (ISBN: 9572239171)</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2021/01/06/Project/">Project</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Yu-Shiang Lin | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Yu-Shiang Lin">
+
+
+
+
+
+<title>Project | Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/"></a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" target="_blank" rel="noopener" href="http://localhost:4000/2021/01/06/Project/">Project</a>
+                
+                    <a class="menu-item" href="/about">Resume</a>
+                
+                    <a class="menu-item" target="_blank" rel="noopener" href="http://localhost:4000">Home</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/"></a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" target="_blank" rel="noopener" href="http://localhost:4000/2021/01/06/Project/">Project</a>
+                
+                    <a class="menu-item" href="/about">Resume</a>
+                
+                    <a class="menu-item" target="_blank" rel="noopener" href="http://localhost:4000">Home</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Project</h1>
+            
+                <div class="post-meta">
+                    
+
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="Cuju"><a href="#Cuju" class="headerlink" title="Cuju"></a>Cuju</h2><h3 id="An-Open-Source-Project-for-Virtualization-Based-Fault-Tolerance"><a href="#An-Open-Source-Project-for-Virtualization-Based-Fault-Tolerance" class="headerlink" title="An Open Source Project for Virtualization-Based Fault Tolerance"></a>An Open Source Project for Virtualization-Based Fault Tolerance</h3><p> Virtualization technology has been widely adopted to enable elastic IT infrastructure, with improved manageability and increased service reliability. Especially, virtualization technology could provide a unique benefit to protect any legacy application systems from hardware failures. The reliability of virtual machines running on virtualized servers is not only threatened by hardware failures beneath the whole virtual infrastructure, but also nosy hypervisors that essentially support virtual machines cannot be trusted.</p>
+<p>In this project, a virtualization- based fault tolerance mechanism using epoch-based (checkpoint- based) synchronization is proposed, named Cuju, and several performance optimization technologies are applied, including a non- stop/pipelined, continuously migration, dirty tracking for guest virtual memory/virtual device status, and eliminate data transfer between QEMU and KVM.</p>
+<p><img src="https://cuju-ft.github.io/cuju-web/intro.png"></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/Cuju-ft/Cuju">GitHub link</a></li>
+</ul>
+<hr>
+<h2 id="qCUDA"><a href="#qCUDA" class="headerlink" title="qCUDA"></a>qCUDA</h2><p>qCUDA is based on the virtio framework to provide the para-virtualized driver as “front-end”, and the device module as “back-end” for performing the interaction with API remoting and memory management. In our test environment, qCUDA can achieve above 95% of the bandwidth efficiency for most results by comparing with the native approach. In addition, by comparing with prior work, qCUDA has more flexibility and interposition that it can execute CUDA-compatible programs in the Linux and Windows VMs, respectively, on QEMU-KVM hypervisor for GPGPU virtualization.</p>
+<h3 id="System-Components"><a href="#System-Components" class="headerlink" title="System Components"></a>System Components</h3><p>The framework of qCUDA has three components, including qCUlibrary, qCUdriver and qCUdevice; the functions of these three components are defined as follows:</p>
+<ul>
+<li><p>qCUlibrary (qcu-library) – The interposer library in VM (guest OS) provided CUDA runtime access, interface of memory allocation, qCUDA command (qCUcmd), and passing the qCUcmd to the qCUdriver.</p>
+</li>
+<li><p>qCUdriver (qcu-driver) – The front-end driver was responsible for the memory management, data movement, analyzing the qCUcmd from the qCUlibrary, and passing the qCUcmd by the control channel which is connected to the qCUdevice.</p>
+</li>
+<li><p>qCUdevice (qcu-device) – The virtual device as the back-end was responsible for receiving/sending the qCUcmd through the control channel; it depended on receiving the qCUcmd to active related operations in the host, including to register GPU binary, convert guest physical addresses (GPA) into host virtual addresses (HVA), and handle the CUDA runtime/driver APIs for accessing the GPU.</p>
+</li>
+</ul>
+<h3 id="Paper"><a href="#Paper" class="headerlink" title="Paper"></a>Paper</h3><ul>
+<li><p><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Che-Rung Lee, Yeh-Ching Chung, “qCUDA: GPGPU Virtualization for High Bandwidth Efficiency ”, CloudCom, 2019.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/coldfunction/qCUDA">GitHub link</a></p>
+</li>
+</ul>
+<hr>
+<h2 id="CUDA-clustalW"><a href="#CUDA-clustalW" class="headerlink" title="CUDA-clustalW"></a>CUDA-clustalW</h2><p>In computational biology, sequence alignment is of priority concern and many methods have been developed to solve sequence alignment-related problems for biological applicatons. ClustalW is a progressive multiple sequence alignment tool to align a set of sequences by repeatedly aligning pairs of sequences and previously generated alignments. Several algorithms or tools have been ported on GPUs with CUDA in computational biology, such as MUMmerGPU, CUDA-MEME, CUDA-BLASTP, and etc. Liu et al. proposed a tool MSA-CUDA to parallelize all three stages of ClustalW v2.0.9 processing pipeline by using inter-task parallelization. CUDA ClustalW v1.0 is a GPU version of ClustalW v2.0.11 which is implemented by using intra-task parallelization and Synchronous Diagonal Multiple Threads type. Several optimization methods were designed to improve the performance of CUDA ClustalW v1.0. From the experimental results, the CUDA ClustalW v1.0 can achieve about 22x speedups for 1000 sequences with length of 1532 in the distance matrix calculation step by comparing to ClustalW v2.0.11 on single-GPU. For the overall execution time, the CUDA ClustalW v1.0 can achieve about 33x speedups by comparing to ClustalW v2.0.11 on two-GPUs.</p>
+<h3 id="Version-1-0-0-March-2013"><a href="#Version-1-0-0-March-2013" class="headerlink" title="Version 1.0.0 (March 2013)"></a>Version 1.0.0 (March 2013)</h3><ul>
+<li>Linux x86 64-bit</li>
+<li>CPU/GPU coprocess</li>
+<li>Support Multiple GPUs</li>
+<li>NVIDIA CUDA support</li>
+<li>Base on clustalW 2.0</li>
+</ul>
+<h3 id="Paper-1"><a href="#Paper-1" class="headerlink" title="Paper"></a>Paper</h3><ul>
+<li>Che-Lun Hung, <font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Yeh-Ching Chung, Yi-Fang Chung, “CUDA ClustalW: An efficient parallel algorithm for progressive multiple sequence alignment on Multi-GPUs”, CBAC(2015).</li>
+</ul>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/coldfunction/CUDA-clustalW">GitHub link</a></li>
+</ul>
+<hr>
+<h2 id="GOOS-SM"><a href="#GOOS-SM" class="headerlink" title="GOOS-SM"></a>GOOS-SM</h2><ul>
+<li>Array operations are useful in a large number of important scientific codes, such as molecular dynamics, climate modeling, atmosphere, ocean sciences, and etc.</li>
+<li>To calculate the sparse matrix efficiently is a crucial issue (time) in many applications.<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3></li>
+<li>A data distribution scheme on the distributed memory multicomputers was the important research topic in the past.</li>
+<li>Data distribution scheme</li>
+<li>Send Followed Compress (SFC)</li>
+<li>Compress Followed Send (CFS)</li>
+<li>Encoding-Decoding (ED)</li>
+<li>Graphics Processing Unit (GPU) has become an attractive coprocessor for scientific computing due to its massive processing capability.</li>
+<li>There are several manuscripts about sparse matrix applications on the GPU have been published.</li>
+</ul>
+<h3 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h3><ul>
+<li>Design the strategies for efficiently large amounts of compressing sparse matrices by using three data distribution schemes based on the GPU.</li>
+<li>The compressed sparse matrices in GPU can be queried for other matrix operations executing.</li>
+</ul>
+<h3 id="Parallelism-scheme"><a href="#Parallelism-scheme" class="headerlink" title="Parallelism scheme"></a>Parallelism scheme</h3><ul>
+<li>Intra-task parallelization</li>
+<li>Each task is assigned to one thread block and all dimBlock threads in the thread block cooperate to perform the task in parallel.</li>
+</ul>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><ul>
+<li><p>Optimal techniques using CUDA</p>
+</li>
+<li><p>Intra-task parallelization</p>
+</li>
+<li><p>Work-Efficient Parallel Scan</p>
+</li>
+<li><p>Avoiding Bank Conflicts</p>
+</li>
+<li><p>Coalescing</p>
+</li>
+<li><p>Cache Configurable</p>
+</li>
+<li><p>Using 12 GPUs, speedup can up to 55x</p>
+</li>
+<li><p>6000, 1024*1024 sparse matrix, total 23.4GB</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://coldfunction.github.io/documents/GOOS-SM_cuda.pdf">Slide link</a></p>
+</li>
+</ul>
+<hr>
+<h2 id="CrackRSA"><a href="#CrackRSA" class="headerlink" title="CrackRSA"></a>CrackRSA</h2><p>Cryptography is an important technique among various applications. In the telecommunication, cryptography is necessary when an untrusted medium is communicated in the network. RSA is a public-key cryptography algorithm to use a pair (N, E) as the public key and D as the private key. The N is the product of two large prime numbers p and q that are kept secret. It is very hard and no known polynomial time algorithms can be used to extract p and q from a large number N. There are many methods of factoring large numbers have been proposed. The advantages of computing power and memory bandwidth for modern GPUs have made porting applications on it become a very important issue. In this work, we proposed an efficient parallel RSA decryption algorithm for many-core GPUs with CUDA. The experimental results showed that the proposed GPU-based algorithm can achieve 1197.5x average speedup compared with the CPU-based algorithm, and within a reasonable time to find out the result of factoring large numbers.</p>
+<h3 id="Preliminary-Concepts"><a href="#Preliminary-Concepts" class="headerlink" title="Preliminary Concepts"></a>Preliminary Concepts</h3><p><img src="https://coldfunction.github.io/documents/pic/CrackRSA1.jpg"><br><img src="https://coldfunction.github.io/documents/pic/CrackRSA2.jpg"></p>
+<h3 id="Paper-2"><a href="#Paper-2" class="headerlink" title="Paper"></a>Paper</h3><ul>
+<li><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Der-Chyuan Lou, “Efficient Parallel RSA Decryption Algorithm for Many-core GPUs with CUDA”, ICTSM2012.</li>
+</ul>
+<hr>
+<h2 id="GPU-REMuSiC"><a href="#GPU-REMuSiC" class="headerlink" title="GPU-REMuSiC"></a>GPU-REMuSiC</h2><p>Multiple sequence alignments with constrains has become an important problem in the computational biology. The concept of constrained sequence alignment is proposed to incorporate the biologist’s domain knowledge into sequence alignments such that the user-specified residues/segments are aligned together in the alignment results. Over the past decade, a series of constrained multiple sequence alignment tools were proposed in the literature. GPU-REMuSiC is a newest tool with the regular expression constrains and uses the graphics processing units (GPUs) with CUDA. GPU-REMuSiC can achieve 29× speedups for overall computation time by the experimental results.</p>
+<p><img src="https://coldfunction.github.io/documents/pic/GPU-REMuSiC1.jpg"></p>
+<h3 id="Paper-3"><a href="#Paper-3" class="headerlink" title="Paper"></a>Paper</h3><ul>
+<li>Che-Lun Hung, <font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Yeh-Ching Chung, Yi-Fang Chung, “CUDA ClustalW: An efficient parallel algorithm for progressive multiple sequence alignment on Multi-GPUs”, CBAC(2015).</li>
+<li>Chun-Yuan Lin, <font color="#f00">Yu-Shiang Lin</font>: Efficient parallel algorithm for multiple sequence alignments with regular expression constraints on graphics processing units. IJCSE 9(1/2): 11-20 (2014).</li>
+<li><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Hsiao-Chieh Chi, Yeh-Ching Chung: Multiple Sequence Alignments with Regular Expression Constraints on a Cloud Service System. IJGHPC 5(3): 55-64 (2013).</li>
+<li><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Yeh-Ching Chung, “GPU-Based Cloud Service for Multiple Sequence Alignments with Regular Expression Constrains”, CloudCom, 2012.</li>
+<li>Chun-Yuan Lin, <font color="#f00">Yu-Shiang Lin</font>, Jiayi Zhou, and Chuan Yi Tang, “GPU-REMuSiC: Efficient Contrained Multiple Sequence Alignment Algorithm on Graphics Processing Units”, CTHPC, 2011.</li>
+<li><font color="#f00">Yu-Shiang Lin</font>, Chun-Yuan Lin, Sheng-Ta Li, Joy Lee, and Chuan Yi ang, “GPU-REMuSiC: the implementation of Constrain Multiple Sequence Alignment on Graphics Processing Units”, NVIDIA GPU  Computing Seminar, 2010.</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2021/01/06/Publish/">Publish</a>
+            
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Yu-Shiang Lin | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
